@@ -1,0 +1,17 @@
+AddHandler mod_python .py
+PythonHandler mod_python.publisher
+PythonDebug On
+
+RewriteEngine On
+RewriteRule ^$ announcements.html
+RewriteRule ^index$ announcements.html
+RewriteRule ^announcements announcements.html
+RewriteRule ^register$ register_form.html
+RewriteRule ^userlist$ teamlist.py
+RewriteRule ^problems$ problems.py
+RewriteRule ^submit$ submit.py
+RewriteRule ^status$ status.py
+RewriteRule ^judge$ status.py
+RewriteRule ^kriMsonRed12343$ kriMsonRed12343.py
+RewriteRule ^about$ about.html
+Options -Indexes
