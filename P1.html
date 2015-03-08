@@ -1,59 +1,102 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>OJ</title>
-		<link href="default.css" rel="stylesheet" media="screen" type="text/css"/>
-		<script src="jqminmax.js" type="text/javascript"></script>
-	</head>
-	<body>
-		<div id="container">
-			<div id="header">
-				<h1>Online Judge</h1><br clear="both"/>
-			</div>
-			<div id="mainbody">
-				<div id="nav">
-					<ul>
-						<li><a href="announcements">announcements</a></li>
-						<li><a href="register">register</a></li>
-						<li><a href="userlist">User List</a></li>
-						<li><a href="problems">problems</a></li>
-						<li><a href="submit">submit</a></li>
-						<li><a href="status">status</a></li>
-						<li><a href="about">about</a></li>
-					</ul><br clear="all"/>
-				</div>
-				<div id="content">
-					<h1>Problem 1</h1>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>OJ</title>
+<link href="default.css" rel="stylesheet" media="screen" type="text/css"/>
+<script src="jqminmax.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1>Online Judge</h1><br clear="both"/>
+</div>
+<div id="mainbody">
+<div id="nav">
+<ul>
+<li><a href="announcements">announcements</a></li>
+<li><a href="register">register</a></li>
+<li><a href="userlist">User List</a></li>
+<li><a href="problems">problems</a></li>
+<li><a href="submit">submit</a></li>
+<li><a href="status">status</a></li>
+<li><a href="about">about</a></li>
+</ul><br clear="all"/>
+</div>
+<div id="content">
+<h1>Problem-1 </h1>
+Given a two dimensional matrix A n*n , where every entry in the matrix is either 0 or 1.
+Initially Mr.X is at position (0,0). He would like to go to the position (n - 1, n - 1). If
+he is at A[i][j], then you can move one step down <br>(i.e., A[i + 1][j] ) or one step right (i.e,
+A[i][j + 1] provided if their values are 1. Mr.X would like to find out whether there is a
+way to reach his target or not. Write a C++ program to help Mr.X.
+<br>
+<b>Relaxations:</b>
+ You can assume that the number of rows and columns in the input matrix are
+always 10.
+<br>
+<b>Constriants:</b>
+ Use stacks.
+<br>
+<b>Input format:</b> The first line contains an integer m that indicates the number of test
+cases, followed by m * 100 binary values.
+<br>
+<b>Output format:</b> Print yes or no in individual lines for all the test cases
+<br>
+<h1>Sample Input</h1>
+2
+<br>
+1 1 1 1 1 1 0 0 0 0
+<br>
+0 1 1 0 0 1 1 0 0 0
+<br>
+0 1 1 1 0 0 1 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 0 1 0 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 0 1 1 1 1 1
+<br>
+0 1 0 0 1 0 1 1 1 1
+<br>
+1 1 1 1 1 1 0 0 0 0
+<br>
+0 1 1 0 0 1 1 0 0 0
+<br>
+0 1 1 0 0 0 1 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 0 1 0 1 0 0
+<br>
+0 1 0 1 1 1 0 1 0 0
+<br>
+0 1 0 1 0 1 1 0 1 1
+<br>
+0 1 0 0 1 0 1 1 1 1
+<br>
+<h1>Sample Output</h1>
+<br>
+PATH FOUND
+<br>
+PATH NOT FOUND
+<br>
+</div>
+</div>
+<div id="footer">
 
-					Given an integer n, print all the integers in reverse order starting from n upto 0, after corresponding number of spaces. First line denotes the number of test cases t.
-
-<h1>Constraints<h2>
-0 < t < 1000 <br>
-0 <= n <= 1000		
-				<h1>Sample Input</h1>
-
-<pre>
-1
-5
-</pre>
-
-					<h1>Sample Output</h1>
-
-<pre>
-     5
-    4
-   3
-  2
- 1
-0
-</pre>
-
-				</div>
-			</div>
-			<div id="footer">
-				
-			</div>
-		</div>
-	</body>
+</div>
+</div>
+</body>
 </html>

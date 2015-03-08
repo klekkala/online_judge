@@ -45,7 +45,7 @@ def index(req,username,passwd,pid,lang,upload):
 				cursor.close()
 				conn.commit()
 				conn.close()
-				#exec("python ../eval/worker.py") 
+				##exec("python ../eval/worker.py") 
 				return util.redirect(req,"status.py")
 			except:
 				pass

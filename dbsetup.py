@@ -14,7 +14,7 @@ try:
 except:
 	pass
 cursor.execute("create table user (username CHAR(255) PRIMARY KEY NOT NULL, password CHAR(255), name CHAR(255), email CHAR(255) UNIQUE)")
-cursor.execute("create table submission (sid INT PRIMARY KEY AUTO_INCREMENT,username CHAR(255), problemid CHAR(32), language CHAR(16), count INT, time TIMESTAMP, status char(255) default 'Queued...', program blob, score INT default 0)")
+cursor.execute("create table submission (sid INT PRIMARY KEY AUTO_INCREMENT, username CHAR(255), problemid CHAR(32), language CHAR(16), count INT, time TIMESTAMP, status char(255) default 'Queued...', program blob, score INT default 0,tle CHAR(255), mem CHAR(255))")
 cursor.close()
 conn.commit()
 conn.close()

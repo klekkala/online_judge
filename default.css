@@ -7,7 +7,7 @@ dl,li,dt,dd,h1,h2,h3,h4,h5,h6,form,body,html,p,blockquote,fieldset,input {
 }
 
 body {
-	background: #F1E9D4  url(images/bg01.png) repeat;
+	background: #F1E9D4  url(images/bg01) repeat;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
 	margin:0;
 	padding:0;
@@ -25,7 +25,7 @@ body {
 }
 
 #header {
-	background: #F1E9D4  url(images/bg01.png) repeat;
+	background: #F1E9D4  url(images/bg01) repeat;
 	border-bottom:#AAA 2px solid;
 	padding:  3em 0em;
 	text-align: center;
@@ -77,7 +77,7 @@ body {
 	padding:0px 0px 0px 0px;
 	border-bottom:#AAA 2px solid;
 	background:#706C53;*/
-	background: #F1E9D4  url(images/bg01.png) repeat;
+	background: #F1E9D4  url(images/bg01) repeat;
 	overflow: hidden;
 	height: 52px;
         margin-bottom: 2em;
@@ -228,9 +228,19 @@ width:80%;
 	font-weight:bold;
 background:#37E718;
 }
-#mainbody #content table.status tr.nacc {
+#mainbody #content table.status tr.wans {
+background:#FF0000;
+}
+#mainbody #content table.status tr.segf {
+background:#0066CC;
+}
+#mainbody #content table.status tr.tle {
 background:#F99206;
 }
+#mainbody #content table.status tr.cerr {
+background:#FFCF17;
+}
+
 
 #instructions
 {

@@ -11,7 +11,7 @@ def prob_sort(a, b):
 	return -1 if int(a[1:]) < int(b[1:]) else 1
 
 MYSQL_HOST = 'localhost'
-MYSQL_PASS = 'ravi@1234'
+MYSQL_PASS = 'prabhupada1'
 MYSQL_USER = 'root'
 MYSQL_DB = 'oj'
 

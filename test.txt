@@ -1,0 +1,31 @@
+Hello everybody,
+      I hope today's lab exam is easy. I just want you guys to score well in atleast C-Programming. For those to whom I told that today's lab-exam will be difficult are in one way lucky and in other way unlucky. lucky because they will prepare hard and unlucky because they will have to spend a night (i.e. Yesterday's night with lots of bad anticipation). But anyway the only thing I want you guys to do is work hard, prepare everything and score. This exam is nothing but:
+
+      void pecular_kiran's_exam(string type_of_students, int number){
+
+          while(as_long_as_the_students_are_interested){ 
+
+              if(students_are_not_interested)
+                  Break;
+              //who cares for them anyway !!!
+
+              else if(number > 50 && type_of_students =='LAZY')
+                  Give_a_damn_tough_paper();
+              //Make them work hard !!
+
+              else if(number > 10 && type_of_students =='HARDWORKING')
+                  Give_a_paper_which_will_benifit_them();
+              //Nice people... I am impressed !!!
+
+              else 
+                  leave_them_alone();
+              //LOL !!!
+          }
+
+          if(you_read_above_mentioned_stuff_as_it_will_come_for_exam)
+              Fool!!! you have wasted lot of time !! code fast !!
+          else
+              Oh Sweatheart !!! you understood the trick behind this !!!
+      }
+
+

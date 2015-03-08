@@ -1,20 +1,40 @@
 #include<stdio.h>
-void main()
+#include<math.h>
+int main()
 {
-	int j=1;
-	long long int min;
-long long int n,i;
-	scanf("%d",&n);
-	scanf("%d",&i);
-	min=i;
-	while(j!=n-1)
+	int k;
+	scanf("%d",&k);
+	while(k--)
 	{
-		j++;
-		scanf("%d",&i);
-		if(i<min)
+		int i,x,n;
+		float sum=0,j;
+		scanf("%d %d",&x,&n);
+		for(i=0;i<=n;i++)
 		{
-			min=i;
+			if(i==0)
+			{
+				sum=1;
+			}
+			else
+			{
+				float h=fact(i);
+				float g=pow(x,i);
+				j=h/g;
+				if(i%2!=0)
+				{
+					j=-j;
+				}
+				sum=sum+j;
+			}
 		}
+printf("%0.4f\n",sum);
 	}
-	printf("%lld\n",min);
+	return 0;
+}
+int fact(int j)
+{
+	if(j==0)
+		return 1;
+	else
+		return j*fact(j-1);
 }

@@ -19,4 +19,5 @@ def index(req):
 	else:
 		f = open(SYS_ROOT+"announcements.html").read()
 		temp_string = "--> <h2>The deadline has ended.</h2> <!--"
+	
 	return f % (temp_string,)

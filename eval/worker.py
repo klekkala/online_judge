@@ -17,7 +17,7 @@ if __name__ == "__main__":
 	#	sleep(3)
 	        conn = DB.connect(host=MYSQL_HOST,passwd=MYSQL_PASS,user=MYSQL_USER,db=MYSQL_DB)
         	cursor = conn.cursor()
-		if cursor.execute("select sid,problemid,language,program from submission where status like \"Queued...\"")!=0:
+		if cursor.execute("select sid,problemid,language,program,tle,mem from submission where status like \"Queued...\"")!=0:
 			record = cursor.fetchone()
 			if cursor.execute("update submission set status=\"Assessing...\" where sid=%s",(record[0],))==1:
 				print "Checking submission "+str(record[0])+" for problem "+record[1]+" in "+record[2]
@@ -29,12 +29,12 @@ if __name__ == "__main__":
 				# Compile Code
 				status,exename = compileCode(record[2],filename)
 				if status == "OK":
-					status,score = runCode(record[1],record[2],exename)
+					status,score,tle,mem = runCode(record[1],record[2],exename)
 				else:
 					score = 0
 					status = "Compile Error"
 				print "Result :"+status+"("+str(score)+")"
-				cursor.execute("update submission set status=%s,score=%s where sid=%s",(status,int(score),record[0]))
+				cursor.execute("update submission set status=%s,score=%s,tle=%s,mem=%s where sid=%s",(status,int(score),tle,mem,record[0]))
 		cursor.close()
 		conn.commit()
 		conn.close()

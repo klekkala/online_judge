@@ -2,6 +2,7 @@
 from settings import *
 from problems import *
 import os
+import re
 from subprocess import *
 def compileCode(lang,filename):  # Code is in 'current.???' according to language used.
 	if lang == "CPP":
@@ -32,7 +33,12 @@ def runCode(pid,lang,exename):       # Executable is in corresponding file as ge
 			p = Popen(cmd,shell=True,stdout=PIPE,stderr=STDOUT,close_fds=True)
 			p.wait()
 			status = p.stdout.read().strip().split('\n')[0]
-			print "For test case %s got status %s" % (test[0],status)
+			dummy = status 
+			l = []
+			l = re.findall(r"[-+]?\d*\.\d+|\d+", dummy)
+			a = l[0]
+			b = l[2]			
+			print "For test case %s got status %s" % (test[0],status)	
 			if status.split(' ')[0] == "OK":
 				cmd = "./%s %s %s" % (checker[pid],outfile,"temp.out")
 				print cmd
@@ -40,11 +46,11 @@ def runCode(pid,lang,exename):       # Executable is in corresponding file as ge
 				if p.wait()==0:
 					score+=test[2]
 				else:
-					return "Wrong Answer",score		
+					return "Wrong Answer",score,a,b	
 			else:
 				if status.split(' ')[0]=="Caught":
-					return "SegFault",score
-				return status,score
+					return "SegFault",score,a,b
+				return status,score,a,b
 		except:
-			return "UnKnown Error",score
-	return "Accepted",score
+			return "UnKnown Error",score,0,0
+	return "Accepted",score,a,b
